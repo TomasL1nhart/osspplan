@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh; /* Add this */
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* Výchozí styl hlavičky s rozmazáním */
+header {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e0e0e0; /* Plná šedá barva po scrollování */
+    color: black;
+    backdrop-filter: none; /* Blur efekt se vypne po scrollování */
+    border-bottom: none; /* Žádná barva na začátku, žádný border */
+    position: fixed;
+    width: 100%;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 0.3s, color 0.3s;
+    height: 60px; /* Pevná výška */
+}
+
+/* Styl pro text hlavičky */
+header a {
+    color: black; /* Barva textu */
+    transition: color 0.3s, transform 0.3s;
+}
+
+header a:hover {
+    transform: scale(1.1); 
+    color: gray;
+}
+
+.logo {
+    max-height: 5rem; 
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
