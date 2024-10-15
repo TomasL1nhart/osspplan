@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Výchozí styl hlavičky s rozmazáním */
+header {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0); /* Plně průhledná barva na začátku */
+    backdrop-filter: blur(10px); /* Rozmazání (blur) na začátku */
+    border-bottom: none; /* Žádná barva na začátku, žádný border */
+    position: fixed;
+    width: 100%;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 0.3s, color 0.3s, text-shadow 0.3s, backdrop-filter 0.3s, border-bottom 0.3s;
+    height: 60px; /* Pevná výška */
+}
+
+/* Styl pro text hlavičky */
+header a {
+    color: white; /* Bílá barva textu na začátku */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Textový stín pro lepší viditelnost */
+    transition: color 0.3s, text-shadow 0.3s; /* Plynulý přechod pro změnu textu */
+}
+
+/* Hlavička po scrollování */
+.scrolled {
+    background-color: #e0e0e0; /* Plná šedá barva po scrollování */
+    color: white;
+    backdrop-filter: none; /* Blur efekt se vypne po scrollování */
+}
+
+/* Text v hlavičce po scrollování */
+.scrolled a {
+    color: black; /* Černá barva textu po scrollování */
+    text-shadow: none; /* Stín zmizí po scrollování */
+}
+
+.logo {
+    max-height: 5rem; 
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.landing {
+    height: 100vh;
+    background: url('img/landing.jpg') no-repeat center center/cover;
+    backdrop-filter: blur(8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.landing::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1); /* Přidání tmavého overlay pro lepší čitelnost textu */
+    z-index: 1;
+}
+
+.landing .content {
+    position: relative;
+    z-index: 2;
+}
+
+.landing .content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 3px;
+}
+
+.landing .content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.7);
+}
+
+.primary-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    background-color: #f0f0f0; /* Světle šedá barva pro moderní vzhled */
+    color: #333;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.primary-button:hover {
+    background-color: #e0e0e0; /* Mírně tmavší odstín šedé při najetí myší */
+    transform: scale(1.1); /* Mírné zvětšení tlačítka při najetí myší */
+}
+
+
+#utek {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+#utek h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.points {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.points li {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+#onas {
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+#onas h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.bubble-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bubble {
+    text-align: center;
+    width: 30%;
+}
+
+.bubble img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.bubble h3 {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+}
+
+.bubble p {
+    color: #666;
+}
