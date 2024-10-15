@@ -1,11 +1,17 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
 body {
     font-family: "Poppins", sans-serif;
+    height: 100vh; /* Add this */
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
 }
 
 /* Výchozí styl hlavičky s rozmazáním */
@@ -37,7 +43,6 @@ header a {
 
 header a:hover {
     transform: scale(1.1); /* Zvětšení textu při najetí myší */
-    color: #ff5e57; /* Změna barvy textu na hover */
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Přidání stínu při hover */
 }
 
@@ -114,7 +119,7 @@ nav ul li a {
 }
 
 .primary-button {
-    padding: 15px 30px;
+    padding: 13px 26px;
     font-size: 1.2rem;
     background-color: #f0f0f0; /* Světle šedá barva pro moderní vzhled */
     color: #333;
@@ -132,12 +137,12 @@ nav ul li a {
 }
 
 
-#utek {
+#evakuace {
     padding: 50px 20px;
     background-color: #f4f4f4;
 }
 
-#utek h2 {
+#evakuace h2 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -149,13 +154,13 @@ nav ul li a {
 }
 
 .points li {
-    margin-bottom: 20px;
     font-size: 1.2rem;
 }
 
 #onas {
-    padding: 50px 20px;
+    padding: 100px 50px;
     background-color: #ffffff;
+    min-height: 800px;
 }
 
 #onas h2 {
@@ -186,4 +191,20 @@ nav ul li a {
 
 .bubble p {
     color: #666;
+}
+
+.wrapper {
+    min-height: 100vh; /* Set the minimum height to the viewport height */
+    position: relative; /* Position the wrapper relative to the viewport */
+}
+
+footer {
+    position: absolute; /* Change from fixed to absolute */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #eaeaea;
+    color: black;
+    text-align: center;
+    padding: 20px;
 }

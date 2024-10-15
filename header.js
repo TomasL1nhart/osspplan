@@ -44,3 +44,28 @@ window.addEventListener('scroll', updateHeader);
 
 // Spustíme funkci hned po načtení stránky, aby byla barva správná i bez scrollování
 window.addEventListener('load', updateHeader);
+
+// Funkce pro "zaseknutí" headeru u sekce "Útěk"
+function stickyHeaderAtSection() {
+    const header = document.querySelector('header');
+    const sectionUtek = document.querySelector('#utek'); // Selektor pro sekci "Útěk"
+    
+    const utekTop = sectionUtek.offsetTop; // Získáme pozici sekce "Útěk"
+    const headerHeight = header.offsetHeight; // Výška hlavičky
+
+    // Kontrola scrollování
+    window.addEventListener('scroll', function() {
+        if (window.scrollY >= (utekTop - headerHeight)) {
+            // Hlavička je u sekce "Útěk", "zasekneme" ji
+            header.style.position = 'absolute'; 
+            header.style.top = `${utekTop - headerHeight}px`;
+        } else {
+            // Normální chování hlavičky při scrollování nahoru
+            header.style.position = 'fixed';
+            header.style.top = '0';
+        }
+    });
+}
+
+// Spustíme funkci po načtení stránky
+window.addEventListener('load', stickyHeaderAtSection);
