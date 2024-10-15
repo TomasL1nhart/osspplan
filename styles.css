@@ -136,6 +136,23 @@ nav ul li a {
     transform: scale(1.1); /* Mírné zvětšení tlačítka při najetí myší */
 }
 
+#video-overlay {
+    position: fixed; /* Připevněno k obrazovce */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Poloprůhledné pozadí, aby video lépe vyniklo */
+    z-index: 200; /* Vysoký z-index, aby se překrýval nad ostatním obsahem */
+    display: none; /* Skryté ve výchozím stavu */
+}
+
+#faq-video {
+    width: 100%; /* Zajištění, že video pokryje celou šířku */
+    height: 100%; /* Zajištění, že video pokryje celou výšku */
+    object-fit: cover; /* Zajištění, že video správně vyplní prostor */
+}
+
 
 #evakuace {
     padding: 50px 20px;
@@ -199,12 +216,24 @@ nav ul li a {
 }
 
 footer {
-    position: absolute; /* Change from fixed to absolute */
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: #eaeaea;
-    color: black;
-    text-align: center;
-    padding: 20px;
+    background-color: #e4e4e4be; /* Barva pozadí footeru */
+    color: black; /* Barva textu */
+    text-align: center; /* Zarovnání textu na střed */
+    width: 100%; /* Zajištění, že footer je přes celou šířku */
+    position: absolute; /* Umístění footeru */
+    bottom: 0; /* Umístění na spodní část stránky */
+    left: 0; /* Zajištění, že footer je přilepený k levé části */
+}
+
+.footer-content {
+    padding: 20px; /* Odsazení uvnitř footer-content */
+}
+
+.footer-content h2 {
+    font-size: 1.2rem; /* Zmenšit velikost textu na 1.2 rem */
+    font-weight: normal; /* Zmenšit tloušťku textu */
+}
+
+.footer-content a {
+    font-size: 1rem; /* Zmenšit velikost textu na 1 rem */
 }

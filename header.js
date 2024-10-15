@@ -48,7 +48,7 @@ window.addEventListener('load', updateHeader);
 // Funkce pro "zaseknutí" headeru u sekce "Útěk"
 function stickyHeaderAtSection() {
     const header = document.querySelector('header');
-    const sectionUtek = document.querySelector('#utek'); // Selektor pro sekci "Útěk"
+    const sectionUtek = document.querySelector('#evakuace'); // Selektor pro sekci "Útěk"
     
     const utekTop = sectionUtek.offsetTop; // Získáme pozici sekce "Útěk"
     const headerHeight = header.offsetHeight; // Výška hlavičky
@@ -57,7 +57,7 @@ function stickyHeaderAtSection() {
     window.addEventListener('scroll', function() {
         if (window.scrollY >= (utekTop - headerHeight)) {
             // Hlavička je u sekce "Útěk", "zasekneme" ji
-            header.style.position = 'absolute'; 
+            header.style.position = 'absolute';
             header.style.top = `${utekTop - headerHeight}px`;
         } else {
             // Normální chování hlavičky při scrollování nahoru
@@ -69,3 +69,25 @@ function stickyHeaderAtSection() {
 
 // Spustíme funkci po načtení stránky
 window.addEventListener('load', stickyHeaderAtSection);
+
+function showVideoAndReload() {
+    var videoOverlay = document.getElementById('video-overlay');
+    var faqVideo = document.getElementById('faq-video');
+
+    videoOverlay.style.display = 'block'; // Zobrazíme overlay
+    faqVideo.muted = false; // Odstraníme mutování videa
+    faqVideo.play(); // Přehráváme video
+
+    // Po skončení videa zastavíme video a skryjeme overlay
+    faqVideo.onended = function() {
+        faqVideo.pause(); // Zastavíme video
+        faqVideo.currentTime = 0; // Resetujeme čas videa na začátek
+        videoOverlay.style.display = 'none'; // Skryjeme overlay
+    };
+}
+
+// Přidání události pro kliknutí na FAQ
+document.getElementById('faq-link').addEventListener('click', function(event) {
+    event.preventDefault(); // Zabráníme výchozímu chování odkazu
+    showVideoAndReload(); // Zavoláme naši funkci
+});
