@@ -91,3 +91,4 @@ document.getElementById('faq-link').addEventListener('click', function(event) {
     event.preventDefault(); // Zabráníme výchozímu chování odkazu
     showVideoAndReload(); // Zavoláme naši funkci
 });
+
