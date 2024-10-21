@@ -25,7 +25,7 @@ header {
     color: black;
     backdrop-filter: none; /* Blur efekt se vypne po scrollování */
     border-bottom: none; /* Žádná barva na začátku, žádný border */
-    position: fixed;
+    position: relative;
     width: 100%;
     cursor: pointer;
     top: 0;

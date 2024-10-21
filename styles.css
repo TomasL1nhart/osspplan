@@ -21,10 +21,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0);
-    backdrop-filter: blur(10px);
+    background-color: #e0e0e0;
     border-bottom: none;
-    position: fixed;
+    position: relative;
     width: 100%;
     cursor: pointer;
     top: 0;
@@ -35,25 +34,13 @@ header {
 }
 
 header a {
-    color: white;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
+    color: black; /* Barva textu */
+    transition: color 0.3s, transform 0.3s;
 }
 
 header a:hover {
-    transform: scale(1.1);
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-}
-
-.scrolled {
-    background-color: #e0e0e0;
-    color: white;
-    backdrop-filter: none;
-}
-
-.scrolled a {
-    color: black;
-    text-shadow: none;
+    transform: scale(1.1); 
+    color: gray;
 }
 
 .logo {
@@ -73,6 +60,45 @@ nav ul li a {
     font-weight: bold;
     font-size: 1.1rem;
 }
+
+/* Skrytí navigace na menších obrazovkách */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Zobrazení hamburger menu na menších zařízeních */
+.hamburger {
+    font-size: 2rem;
+    display: none; /* Skrytí na desktopu */
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #e0e0e0;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        transform: translateY(-100%);
+    }
+
+    nav ul.active {
+        height: auto;
+        transform: translateY(0);
+    }
+
+    .hamburger {
+        display: block; /* Zobrazení na mobilech */
+    }
+}
+
 
 .landing {
     height: 100vh;
@@ -334,9 +360,6 @@ footer {
         width: 80%; 
     }
 
-    footer {
-        padding: 30px 0; /* Větší padding na mobilní verzi */
-    }
     .members-grid {
         grid-template-columns: 1fr; /* Jeden sloupec pro mobilní zařízení */
         gap: 20px; /* Méně mezery mezi kartami na mobilu */
