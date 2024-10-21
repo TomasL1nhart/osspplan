@@ -152,9 +152,8 @@ nav ul {
 }
 
 #onas {
-    padding: 100px 20px; /* Snížení paddingu na bocích pro lepší mobilní zobrazení */
     background-color: #ffffff;
-    min-height: 800px;
+    min-height: 130vh;
 }
 
 #onas h2 {
@@ -165,16 +164,16 @@ nav ul {
 
 .bubble-section {
     display: flex;
-    justify-content: center;
-    align-items: stretch; /* Změna na stretch */
-    flex-wrap: wrap;
-    gap: 40px; /* Mezery mezi bublinami */
+    justify-content: center; /* Změna na center */
+    align-items: center;
+    flex-wrap: wrap; /* Přizpůsobení pro mobil */
+    gap: 40px;
 }
-
 
 .bubble {
     text-align: center;
     width: 30%;
+    margin-bottom: 40px; /* Mezery mezi bublinami */
     min-height: 150px; /* Nastavení minimální výšky */
 }
 
@@ -214,7 +213,7 @@ h2 {
     align-items: center; /* Uložení hlavní karty na střed */
     width: 100%;
     max-width: 1200px;
-    padding: 20px;
+    padding: 35px;
 }
 
 .large-member-card {
@@ -276,11 +275,6 @@ footer {
     padding: 7px;
 }
 
-.footer-content h2 {
-    font-size: 1rem;
-    font-weight: normal;
-}
-
 .footer-content a {
     font-size: 1rem;
 }
@@ -306,7 +300,6 @@ footer {
     .bubble-section {
         flex-direction: column; /* Uložení prvků pod sebe */
         align-items: center; /* Uložení na střed */
-        text-align: center; /* Přidání zarovnání textu na střed */
     }
 }
 
@@ -314,32 +307,10 @@ footer {
     nav ul {
         flex-direction: column;
         gap: 20px; 
-        align-items: center; /* Zarovnání položek menu na střed */
     }
 
     .bubble {
-        width: 90%; /* Snížení šířky na 90% pro lepší zarovnání */
-        margin: 0 auto; /* Ujistěte se, že bubliny jsou horizontálně centrovány */
-    }
-
-    .bubble-section {
-        flex-direction: column; /* Uložení prvků pod sebe */
-        align-items: center; /* Uložení na střed */
-        text-align: center; /* Přidání zarovnání textu na střed */
-    }
-
-    #onas {
-        padding: 50px 20px; /* Snížení paddingu pro mobilní zařízení */
-        text-align: center; /* Zarovnání textu na střed */
-    }
-
-    #onas h2 {
-        font-size: 2rem; /* Zmenšení nadpisu v sekci O nás */
-    }
-
-    .bubble {
-        width: 100%; /* Bubliny zabírají 100% šířku */
-        margin-bottom: 20px; /* Mezery mezi bublinami */
+        width: 80%; 
     }
 
     .members-grid {
@@ -357,5 +328,18 @@ footer {
 
     #onas {
         padding: 50px 20px; /* Snížení paddingu pro mobilní zařízení */
+    }
+
+    .bubble-section {
+        flex-direction: column; /* Uložení prvků pod sebe */
+        align-items: center; /* Uložení na střed */
+    }
+
+    #onas h2 {
+        font-size: 2rem; /* Zmenšení nadpisu v sekci O nás */
+    }
+
+    .bubble {
+        width: 100%; /* Bubliny zabírají 100% šířku */
     }
 }
