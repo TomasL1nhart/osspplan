@@ -1,0 +1,121 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100vh; /* Add this */
+    margin: 0;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #e0e0e0; /* Plná šedá barva po scrollování */
+    color: black;
+    backdrop-filter: none; /* Blur efekt se vypne po scrollování */
+    border-bottom: none; /* Žádná barva na začátku, žádný border */
+    position: fixed;
+    width: 100%;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: background-color 0.3s, color 0.3s;
+    height: 60px; /* Pevná výška */
+}
+
+/* Styl pro text hlavičky */
+header a {
+    color: black; /* Barva textu */
+    transition: color 0.3s, transform 0.3s;
+}
+
+header a:hover {
+    transform: scale(1.1); 
+    color: gray;
+}
+
+.logo {
+    max-height: 5rem; 
+    width: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+#evakuace {
+    padding: 50px 20px;
+    background-color: #f1f1f1;
+    width: 80%; /* Nastavení šířky sekce na 80% stránky */
+    margin: 100px auto 0 auto;
+    border-radius: 4rem; /* Přidání zakulacených rohů */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Přidání lehkého stínu */
+}
+
+
+#evakuace h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.points {
+    list-style: none;
+    font-size: 1.15rem;
+    padding: 0;
+    text-align: left;
+    margin-left: 10rem; 
+}
+
+
+.points li {
+    font-size: 1.2rem;
+}
+
+.wrapper {
+    min-height: 100vh; /* Set the minimum height to the viewport height */
+    position: relative; /* Position the wrapper relative to the viewport */
+}
+
+footer {
+    background-color: #e4e4e4be; /* Barva pozadí footeru */
+    color: black; /* Barva textu */
+    text-align: center; /* Zarovnání textu na střed */
+    width: 100%; /* Zajištění, že footer je přes celou šířku */
+    position: absolute; /* Umístění footeru */
+    bottom: 0; /* Umístění na spodní část stránky */
+    left: 0; /* Zajištění, že footer je přilepený k levé části */
+}
+
+.footer-content {
+    padding: 7px; /* Odsazení uvnitř footer-content */
+}
+
+.footer-content h2 {
+    font-size: 1rem; /* Zmenšit velikost textu na 1.2 rem */
+    font-weight: normal; /* Zmenšit tloušťku textu */
+}
+
+.footer-content a {
+    font-size: 1rem; /* Zmenšit velikost textu na 1 rem */
+}

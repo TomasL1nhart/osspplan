@@ -6,7 +6,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    height: 100vh; /* Add this */
+    height: 100vh;
     margin: 0;
 }
 
@@ -15,16 +15,15 @@ html, body {
     scroll-behavior: smooth;
 }
 
-/* Výchozí styl hlavičky s rozmazáním */
 header {
     display: flex;
     font-family: 'Montserrat', sans-serif;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(255, 255, 255, 0); /* Plně průhledná barva na začátku */
-    backdrop-filter: blur(10px); /* Rozmazání (blur) na začátku */
-    border-bottom: none; /* Žádná barva na začátku, žádný border */
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    border-bottom: none;
     position: fixed;
     width: 100%;
     cursor: pointer;
@@ -32,32 +31,29 @@ header {
     left: 0;
     z-index: 100;
     transition: background-color 0.3s, color 0.3s, text-shadow 0.3s, backdrop-filter 0.3s, border-bottom 0.3s;
-    height: 60px; /* Pevná výška */
+    height: 60px;
 }
 
-/* Styl pro text hlavičky */
 header a {
-    color: white; /* Bílá barva textu na začátku */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Textový stín pro lepší viditelnost */
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     transition: color 0.3s, text-shadow 0.3s, transform 0.3s;
 }
 
 header a:hover {
-    transform: scale(1.1); /* Zvětšení textu při najetí myší */
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); /* Přidání stínu při hover */
+    transform: scale(1.1);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Hlavička po scrollování */
 .scrolled {
-    background-color: #e0e0e0; /* Plná šedá barva po scrollování */
+    background-color: #e0e0e0;
     color: white;
-    backdrop-filter: none; /* Blur efekt se vypne po scrollování */
+    backdrop-filter: none;
 }
 
-/* Text v hlavičce po scrollování */
 .scrolled a {
-    color: black; /* Černá barva textu po scrollování */
-    text-shadow: none; /* Stín zmizí po scrollování */
+    color: black;
+    text-shadow: none;
 }
 
 .logo {
@@ -96,7 +92,7 @@ nav ul li a {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1); /* Přidání tmavého overlay pro lepší čitelnost textu */
+    background: rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
@@ -122,7 +118,7 @@ nav ul li a {
 .primary-button {
     padding: 13px 26px;
     font-size: 1.2rem;
-    background-color: #f0f0f0; /* Světle šedá barva pro moderní vzhled */
+    background-color: #f0f0f0;
     color: #333;
     font-weight: bold;
     border: none;
@@ -133,27 +129,26 @@ nav ul li a {
 }
 
 .primary-button:hover {
-    background-color: #e0e0e0; /* Mírně tmavší odstín šedé při najetí myší */
-    transform: scale(1.1); /* Mírné zvětšení tlačítka při najetí myší */
+    background-color: #e0e0e0;
+    transform: scale(1.1);
 }
 
 #video-overlay {
-    position: fixed; /* Připevněno k obrazovce */
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Poloprůhledné pozadí, aby video lépe vyniklo */
-    z-index: 200; /* Vysoký z-index, aby se překrýval nad ostatním obsahem */
-    display: none; /* Skryté ve výchozím stavu */
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 200;
+    display: none;
 }
 
 #faq-video {
-    width: 100%; /* Zajištění, že video pokryje celou šířku */
-    height: 100%; /* Zajištění, že video pokryje celou výšku */
-    object-fit: cover; /* Zajištění, že video správně vyplní prostor */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
-
 
 #evakuace {
     padding: 50px 20px;
@@ -174,13 +169,12 @@ nav ul li a {
     margin-left: 10rem; 
 }
 
-
 .points li {
     font-size: 1.2rem;
 }
 
 #onas {
-    padding: 100px 50px;
+    padding: 100px 20px; /* Snížení paddingu na bocích pro lepší mobilní zobrazení */
     background-color: #ffffff;
     min-height: 800px;
 }
@@ -193,13 +187,15 @@ nav ul li a {
 
 .bubble-section {
     display: flex;
-    justify-content: space-around;
+    justify-content: center; /* Změna na center */
     align-items: center;
+    flex-wrap: wrap; /* Přizpůsobení pro mobil */
 }
 
 .bubble {
     text-align: center;
     width: 30%;
+    margin-bottom: 20px; /* Mezery mezi bublinami */
 }
 
 .bubble img {
@@ -216,30 +212,124 @@ nav ul li a {
     color: #666;
 }
 
+#members {
+    min-height: 125vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f9f9f9;
+    padding-top: 50px;
+}
+
+h2 {
+    margin: 20px 0;
+    font-size: 2em;
+    text-align: center; /* Centrování nadpisů */
+}
+
+.members-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+}
+
 .wrapper {
-    min-height: 100vh; /* Set the minimum height to the viewport height */
-    position: relative; /* Position the wrapper relative to the viewport */
+    min-height: 100vh;
+    position: relative;
 }
 
 footer {
-    background-color: #e4e4e4be; /* Barva pozadí footeru */
-    color: black; /* Barva textu */
-    text-align: center; /* Zarovnání textu na střed */
-    width: 100%; /* Zajištění, že footer je přes celou šířku */
-    position: absolute; /* Umístění footeru */
-    bottom: 0; /* Umístění na spodní část stránky */
-    left: 0; /* Zajištění, že footer je přilepený k levé části */
+    background-color: #e4e4e4be;
+    color: black;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .footer-content {
-    padding: 20px; /* Odsazení uvnitř footer-content */
+    padding: 7px;
 }
 
 .footer-content h2 {
-    font-size: 1.2rem; /* Zmenšit velikost textu na 1.2 rem */
-    font-weight: normal; /* Zmenšit tloušťku textu */
+    font-size: 1rem;
+    font-weight: normal;
 }
 
 .footer-content a {
-    font-size: 1rem; /* Zmenšit velikost textu na 1 rem */
+    font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+    .members-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bubble {
+        width: 45%; 
+    }
+
+    .landing .content h1 {
+        font-size: 3rem; 
+    }
+
+    .landing .content p {
+        font-size: 1.2rem; 
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 20px; 
+    }
+
+    .bubble {
+        width: 80%; 
+    }
+
+    .members-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .landing .content h1 {
+        font-size: 2.5rem; 
+    }
+
+    .landing .content p {
+        font-size: 1rem; 
+    }
+
+    #onas {
+        padding: 50px 20px; /* Snížení paddingu pro mobilní zařízení */
+    }
+
+    .bubble-section {
+        flex-direction: column; /* Uložení prvků pod sebe */
+        align-items: center; /* Uložení na střed */
+    }
+
+    #onas h2 {
+        font-size: 2rem; /* Zmenšení nadpisu v sekci O nás */
+    }
+
+    .bubble {
+        width: 100%; /* Bubliny zabírají 100% šířku */
+    }
 }

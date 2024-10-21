@@ -48,7 +48,7 @@ window.addEventListener('load', updateHeader);
 // Funkce pro "zaseknutí" headeru u sekce "Útěk"
 function stickyHeaderAtSection() {
     const header = document.querySelector('header');
-    const sectionUtek = document.querySelector('#evakuace'); // Selektor pro sekci "Útěk"
+    const sectionUtek = document.querySelector('#onas'); // Selektor pro sekci "Útěk"
     
     const utekTop = sectionUtek.offsetTop; // Získáme pozici sekce "Útěk"
     const headerHeight = header.offsetHeight; // Výška hlavičky
@@ -91,4 +91,3 @@ document.getElementById('faq-link').addEventListener('click', function(event) {
     event.preventDefault(); // Zabráníme výchozímu chování odkazu
     showVideoAndReload(); // Zavoláme naši funkci
 });
-
