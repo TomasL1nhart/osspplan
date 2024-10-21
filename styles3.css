@@ -64,32 +64,46 @@ nav ul li a {
 }
 
 #evakuace {
-    padding: 50px 20px;
-    background-color: #f1f1f1;
-    width: 80%; /* Nastavení šířky sekce na 80% stránky */
-    margin: 100px auto 0 auto;
-    border-radius: 4rem; /* Přidání zakulacených rohů */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Přidání lehkého stínu */
+    padding: 50px 20px; /* Vnitřní okraje pro sekci */
+    background-color: #f1f1f1; /* Světle šedé pozadí */
+    width: 80%; /* Šířka sekce */
+    margin: 100px auto 0 auto; /* Středování sekce */
+    border-radius: 4rem; /* Zakulacené rohy */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Stín pro sekci */
+    min-height: 1400px; /* Zvětšení minimální výšky sekce (nyní 600px) */
 }
-
-
 #evakuace h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
+    text-align: center; /* Zarovnání nadpisu na střed */
+    margin-bottom: 20px; /* Mezery pod nadpisem */
+    font-size: 2.5rem; /* Velikost nadpisu */
 }
 
-.points {
-    list-style: none;
-    font-size: 1.15rem;
-    padding: 0;
-    text-align: left;
-    margin-left: 10rem; 
+.bubble-section {
+    display: flex;
+    flex-direction: column; /* Uložení bublin pod sebe */
+    align-items: center; /* Uložení na střed */
+    gap: 30px; /* Mezery mezi bublinami */
 }
 
+.bubble {
+    background-color: #ffffff; /* Barva pozadí bubliny */
+    border-radius: 10px; /* Zaoblení rohů bubliny */
+    padding: 20px; /* Vnitřní okraj bubliny */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Stín bubliny */
+    width: 90%; /* Šířka bubliny */
+    max-width: 600px; /* Maximální šířka bubliny */
+    text-align: left; /* Zarovnání textu vlevo */
+}
 
-.points li {
-    font-size: 1.2rem;
+.bubble h3 {
+    margin-bottom: 15px; /* Mezery pod nadpisem bubliny */
+    font-size: 1.8rem; /* Velikost nadpisu bubliny */
+    color: #333; /* Barva nadpisu bubliny */
+}
+
+.bubble .points {
+    color: #555; /* Barva textu pro body */
+    line-height: 1.5; /* Řádkování pro lepší čitelnost */
 }
 
 .wrapper {
