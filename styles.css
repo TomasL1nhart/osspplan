@@ -229,23 +229,37 @@ h2 {
 }
 
 .members-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Uložení hlavní karty na střed */
     width: 100%;
     max-width: 1200px;
+    padding: 20px;
 }
 
-/* Styl pro člena 7 */
-.member-card.member-7 {
-    margin: 0 auto; /* Vycentrování pouze pro člena 7 */
-    display: flex; 
-    flex-direction: column; 
+.large-member-card {
+    display: flex;
+    flex-direction: column;
     align-items: center; /* Uložení obsahu na střed */
     text-align: center; /* Uložení textu na střed */
+    padding: 20px;
+    margin-bottom: 30px; /* Mezera mezi větší kartou a ostatními kartami */
+    border: 2px solid #ccc; /* Rámeček */
+    border-radius: 10px; /* Zaoblení rohů */
+    background-color: #f9f9f9; /* Pozadí */
+    width: 80%; /* Šířka větší karty */
+    max-width: 600px; /* Maximální šířka */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Stín */
 }
 
+.members-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tři sloupce pro členy */
+    gap: 50px;
+    width: 100%;
+}
+
+/* Styl pro členy */
 .member-card {
     display: flex;
     flex-direction: column;
@@ -255,6 +269,12 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: white;
+}
+
+.member-card.member-7 {
+    display: flex;
+    align-items: center;
+    text-align: center;
 }
 
 .wrapper {
@@ -286,8 +306,9 @@ footer {
 }
 
 @media (max-width: 1200px) {
-    .members-container {
-        grid-template-columns: repeat(2, 1fr);
+    .members-grid {
+        grid-template-columns: 1fr; /* Jeden sloupec pro mobilní zařízení */
+        gap: 20px; /* Méně mezery mezi kartami na mobilu */
     }
 
     .bubble {
@@ -316,8 +337,9 @@ footer {
     footer {
         padding: 30px 0; /* Větší padding na mobilní verzi */
     }
-    .members-container {
-        grid-template-columns: 1fr; 
+    .members-grid {
+        grid-template-columns: 1fr; /* Jeden sloupec pro mobilní zařízení */
+        gap: 20px; /* Méně mezery mezi kartami na mobilu */
     }
 
     .landing .content h1 {
