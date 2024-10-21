@@ -12,97 +12,52 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header>
-            <img src="img/logo.webp" alt="Logo" class="logo" draggable="false">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Domů</a></li>
-                    <li><a href="evakuace.html">Evakuace</a></li>
-                    <li><a href="#onas">O nás</a></li>
-                    <li><a href="plan.html">Plán</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <img src="img/logo.webp" alt="Logo" class="logo" draggable="false">
+        <div class="hamburger" id="hamburger">&#9776;</div>
+        <nav class="menu" id="nav-menu">
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="evakuace.html">Evakuace</a></li>
+                <li><a href="#onas">O nás</a></li>
+                <li><a href="plan.html">Plán</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Landing Section -->
-        <section class="landing">
-            <div class="content">
-                <h1>Test hlavní text</h1>
-                <p>Pod text</p>
-                <button class="primary-button" onclick="location.href='plan.html';">Plán Button</button>
+    <!-- Landing Section -->
+    <section class="landing">
+        <div class="content">
+            <h1>Test hlavní text</h1>
+            <p>Pod text</p>
+            <button class="primary-button" onclick="location.href='plan.html';">Plán Button</button>
+        </div>
+    </section>
+
+
+    <!-- O nás Section -->
+    <!-- O nás Section -->
+    <section id="onas">
+        <h2>O nás</h2>
+        <div class="bubble-section">
+            <!-- Bubliny pro informace -->
+            <div class="bubble">
+                <img src="img/fighter.svg" alt="Ikona 1" draggable="false">
+                <h3>Modernizace Školních Plánů</h3>
+                <p>blablabla kecičky</p>
             </div>
-        </section>
-
-
-        <!-- O nás Section -->
-        <!-- O nás Section -->
-        <section id="onas">
-            <h2>O nás</h2>
-            <div class="bubble-section">
-                <!-- Bubliny pro informace -->
-                <div class="bubble">
-                    <img src="img/fighter.svg" alt="Ikona 1" draggable="false">
-                    <h3>Modernizace Školních Plánů</h3>
-                    <p>blablabla kecičky</p>
-                </div>
-                <div class="bubble">
-                    <img src="img/phone.svg" alt="Ikona 2" draggable="false">
-                    <h3>Nadpis 2</h3>
-                    <p>blablabla kecičky</p>
-                </div>
-                <div class="bubble">
-                    <img src="img/icon3.svg" alt="Ikona 3" draggable="false">
-                    <h3>Nadpis 3</h3>
-                    <p>blablabla kecičky</p>
-                </div>
+            <div class="bubble">
+                <img src="img/phone.svg" alt="Ikona 2" draggable="false">
+                <h3>Nadpis 2</h3>
+                <p>blablabla kecičky</p>
             </div>
-
-            <footer>
-                <hr>
-                <div class="footer-content">
-                    <p>Havarijní Plán OSŠP</p>
-                    <a href="https://www.ossp.cz" target="_blank">OSSP.cz</a>
-                </div>
-            </footer>
-        </section>
-
-        <!-- Členové Projektu Section -->
-        <section id="members">
-            <h2>Členové Projektu</h2>
-            <div class="members-container">
-                <div class="member-card">
-                    <h3>Člen 1</h3>
-                    <p>Informace o členovi 1.</p>
-                </div>
-                <div class="member-card">
-                    <h3>Člen 2</h3>
-                    <p>Informace o členovi 2.</p>
-                </div>
-                <div class="member-card">
-                    <h3>Člen 3</h3>
-                    <p>Informace o členovi 3.</p>
-                </div>
-                <div class="member-card">
-                    <h3>Člen 4</h3>
-                    <p>Informace o členovi 4.</p>
-                </div>
-                <div class="member-card">
-                    <h3>Člen 5</h3>
-                    <p>Informace o členovi 5.</p>
-                </div>
-                <div class="member-card">
-                    <h3>Člen 6</h3>
-                    <p>Informace o členovi 6.</p>
-                </div>
-                <div class="member-card">
-                    <h3>Člen 7</h3>
-                    <p>Informace o členovi 7.</p>
-                </div>
+            <div class="bubble">
+                <img src="img/icon3.svg" alt="Ikona 3" draggable="false">
+                <h3>Nadpis 3</h3>
+                <p>blablabla kecičky</p>
             </div>
-        </section>
+        </div>
 
-        <!-- Footer -->
         <footer>
             <hr>
             <div class="footer-content">
@@ -110,15 +65,51 @@
                 <a href="https://www.ossp.cz" target="_blank">OSSP.cz</a>
             </div>
         </footer>
-        
-        <footer>
-            <hr>
-            <div class="footer-content">
-                <p>Havarijní Plán OSŠP</p>
-                <a href="https://www.ossp.cz" target="_blank">OSSP.cz</a>
+    </section>
+
+    <!-- Členové Projektu Section -->
+    <section id="members">
+        <h2>Členové Projektu</h2>
+        <div class="members-container">
+            <div class="member-card">
+                <h3>Člen 1</h3>
+                <p>Informace o členovi 1.</p>
             </div>
-        </footer>
-        </section>
+            <div class="member-card">
+                <h3>Člen 2</h3>
+                <p>Informace o členovi 2.</p>
+            </div>
+            <div class="member-card">
+                <h3>Člen 3</h3>
+                <p>Informace o členovi 3.</p>
+            </div>
+            <div class="member-card">
+                <h3>Člen 4</h3>
+                <p>Informace o členovi 4.</p>
+            </div>
+            <div class="member-card">
+                <h3>Člen 5</h3>
+                <p>Informace o členovi 5.</p>
+            </div>
+            <div class="member-card">
+                <h3>Člen 6</h3>
+                <p>Informace o členovi 6.</p>
+            </div>
+            <div class="member-card">
+                <h3>Člen 7</h3>
+                <p>Informace o členovi 7.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <hr>
+        <div class="footer-content">
+            <p>Havarijní Plán OSŠP</p>
+            <a href="https://www.ossp.cz" target="_blank">OSSP.cz</a>
+        </div>
+    </footer>
+    </section>
     </div>
     <div id="video-overlay" style="display: none;">
         <video id="faq-video" autoplay>
@@ -126,5 +117,4 @@
             <script src="header.js"></script>
             <script src="members.js"></script>
 </body>
-
 </html>
