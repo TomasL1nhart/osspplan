@@ -70,7 +70,7 @@ nav ul li a {
     margin: 100px auto 0 auto; /* Středování sekce */
     border-radius: 4rem; /* Zakulacené rohy */
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Stín pro sekci */
-    min-height: 1400px; /* Zvětšení minimální výšky sekce (nyní 600px) */
+    min-height: 1600px; /* Zvětšení minimální výšky sekce (nyní 600px) */
 }
 #evakuace h2 {
     text-align: center; /* Zarovnání nadpisu na střed */
