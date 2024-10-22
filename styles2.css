@@ -4,39 +4,35 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Délka pro tělo a html */
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
 body {
     font-family: "Poppins", sans-serif;
-    height: 100vh; /* Add this */
-    margin: 0;
+    display: flex; /* Použití flexboxu */
+    flex-direction: column;
 }
 
-html, body {
-    height: 100%;
-    scroll-behavior: smooth;
-}
-
-/* Výchozí styl hlavičky s rozmazáním */
 header {
     display: flex;
     font-family: 'Montserrat', sans-serif;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #e0e0e0; /* Plná šedá barva po scrollování */
-    color: black;
-    backdrop-filter: none; /* Blur efekt se vypne po scrollování */
-    border-bottom: none; /* Žádná barva na začátku, žádný border */
-    position: fixed;
+    background-color: #e0e0e0;
+    border-bottom: none;
+    position: fixed; /* Zajištění, že header zůstává na vrcholu */
     width: 100%;
-    cursor: pointer;
     top: 0;
     left: 0;
     z-index: 100;
-    transition: background-color 0.3s, color 0.3s;
-    height: 60px; /* Pevná výška */
+    height: 60px;
+    transition: background-color 0.3s, color 0.3s, text-shadow 0.3s, backdrop-filter 0.3s, border-bottom 0.3s;
 }
 
-/* Styl pro text hlavičky */
 header a {
     color: black; /* Barva textu */
     transition: color 0.3s, transform 0.3s;
@@ -60,13 +56,39 @@ nav ul {
 
 nav ul li a {
     text-decoration: none;
+    color: black;
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-.wrapper {
-    min-height: 100vh; /* Set the minimum height to the viewport height */
-    position: relative; /* Position the wrapper relative to the viewport */
+.button-container {
+    flex: 1; /* Umožní tlačítku zabrat veškerý dostupný prostor */
+    display: flex;
+    justify-content: center; /* Horizontální vycentrování */
+    align-items: center; /* Vertikální vycentrování */
+}
+
+.download-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #007bff;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+}
+
+.download-button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
 }
 
 .footer-logo {
@@ -83,13 +105,7 @@ footer {
     text-align: center;
     width: 100%;
     position: relative; /* Zajištění, že footer je součástí toku stránky */
-    bottom: 0;
-    left: 0;
-    margin-top: auto; /* Ujistěte se, že footer končí na konci obsahu */
-}
-
-.footer-content {
-    padding: 7px;
+    margin-top: -10px; /* Posune footer o 20px výše */
 }
 
 .footer-content a {

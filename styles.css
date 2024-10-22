@@ -151,14 +151,19 @@ nav ul {
 .bubble {
     text-align: center;
     width: 30%;
-    min-height: 250px; /* Udržení stejné výšky */
-    display: flex; /* Zajištění, že obsah bubliny se zarovná */
-    flex-direction: column; /* Zarovnání textu na střed */
-    justify-content: center; /* Vertikální zarovnání obsahu */
-    padding: 20px; /* Odsazení uvnitř bubliny */
-    background-color: #f9f9f9; /* Pozadí bubliny */
-    border: 2px solid #ccc; /* Rámeček bubliny */
-    border-radius: 10px; /* Zaoblení rohů */
+    min-height: 250px; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border: 2px solid #ccc; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease; /* Přidání přechodu pro animaci */
+}
+
+.bubble:hover {
+    transform: scale(1.05); /* Zvětšení bubliny o 5% při hoveru */
 }
 
 .bubble img {
@@ -212,6 +217,11 @@ h2 {
     width: 80%; /* Šířka větší karty */
     max-width: 600px; /* Maximální šířka */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.large-member-card:hover {
+    transform: scale(1.05);
 }
 
 .members-grid {
@@ -221,7 +231,6 @@ h2 {
     width: 100%;
 }
 
-/* Styl pro členy */
 .member-card {
     display: flex;
     flex-direction: column;
@@ -232,6 +241,11 @@ h2 {
     border-radius: 10px;
     background-color: #f9f9f9;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease; /* Přidání přechodu pro animaci */
+}
+
+.member-card:hover {
+    transform: scale(1.05); /* Zvětšení člena o 5% při hoveru */
 }
 
 .member-card.member-7 {
@@ -244,7 +258,12 @@ h2 {
     padding: 20px;
     border: 1px solid #ccc; /* Přidání ohraničení */
     border-radius: 10px;
-    background-color:#f9f9f9;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease; /* Přidání přechodu pro animaci */
+}
+
+.member-card.member-7:hover {
+    transform: scale(1.05); /* Zvětšení karty o 5% při hoveru */
 }
 
 .wrapper {

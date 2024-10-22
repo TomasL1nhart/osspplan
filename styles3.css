@@ -109,6 +109,7 @@ nav ul li a {
 .wrapper {
     min-height: 100vh; /* Set the minimum height to the viewport height */
     position: relative; /* Position the wrapper relative to the viewport */
+    padding-bottom: 150px; /* Přidejte spodní odsazení pro footer */
 }
 
 footer {
@@ -117,8 +118,17 @@ footer {
     text-align: center; /* Zarovnání textu na střed */
     width: 100%; /* Zajištění, že footer je přes celou šířku */
     position: absolute; /* Umístění footeru */
-    bottom: 0; /* Umístění na spodní část stránky */
+    bottom: 0; /* Umístění na spodní část wrapperu */
     left: 0; /* Zajištění, že footer je přilepený k levé části */
+    height: 80px; /* Nastavení výšky footeru, aby se zajistil prostor pro obsah */
+}
+
+.footer-logo {
+    position: absolute;
+    bottom: 10px; /* Umístění 10px od spodního okraje */
+    right: 10px; /* Umístění 10px od pravého okraje */
+    width: 50px; /* Nastavení velikosti obrázku */
+    height: auto; /* Udržení poměru stran */
 }
 
 .footer-content {
