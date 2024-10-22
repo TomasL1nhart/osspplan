@@ -63,3 +63,35 @@ nav ul li a {
     font-weight: bold;
     font-size: 1.1rem;
 }
+
+.wrapper {
+    min-height: 100vh; /* Set the minimum height to the viewport height */
+    position: relative; /* Position the wrapper relative to the viewport */
+}
+
+.footer-logo {
+    position: absolute;
+    bottom: 10px; /* Umístění 10px od spodního okraje */
+    right: 10px; /* Umístění 10px od pravého okraje */
+    width: 50px; /* Nastavení velikosti obrázku */
+    height: auto; /* Udržení poměru stran */
+}
+
+footer {
+    background-color: #e4e4e4be;
+    color: black;
+    text-align: center;
+    width: 100%;
+    position: relative; /* Zajištění, že footer je součástí toku stránky */
+    bottom: 0;
+    left: 0;
+    margin-top: auto; /* Ujistěte se, že footer končí na konci obsahu */
+}
+
+.footer-content {
+    padding: 7px;
+}
+
+.footer-content a {
+    font-size: 1rem;
+}
