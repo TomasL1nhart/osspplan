@@ -196,7 +196,6 @@ nav ul {
     flex-grow: 1; /* Umožnění nadpisu růst a zabírat prostor */
 }
 
-
 #members {
     min-height: 125vh;
     display: flex;
@@ -234,7 +233,7 @@ h2 {
     background-color: #f9f9f9; /* Pozadí */
     width: 80%; /* Šířka větší karty */
     max-width: 600px; /* Maximální šířka */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Stín */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .members-grid {
@@ -253,13 +252,21 @@ h2 {
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
-    background-color: white;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.);
 }
 
 .member-card.member-7 {
+    grid-column: 2 / 3; /* Umístí člena 7 do středu */
+    justify-self: center; /* Zajistí, že bude karta uprostřed */
+    align-self: center; /* Svislé zarovnání na střed */
     display: flex;
-    align-items: center;
+    flex-direction: column;
     text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc; /* Přidání ohraničení */
+    border-radius: 10px;
+    background-color:#f9f9f9;
 }
 
 .wrapper {
@@ -289,7 +296,12 @@ footer {
 @media (max-width: 1200px) {
     .members-grid {
         grid-template-columns: 1fr; /* Jeden sloupec pro mobilní zařízení */
-        gap: 20px; /* Méně mezery mezi kartami na mobilu */
+        gap: 20px;
+    }
+
+    .member-card.member-7 {
+        grid-column: auto; /* Zrušení umístění člena 7 do specifického sloupce */
+        width: 100%
     }
 
     .bubble {
@@ -306,7 +318,7 @@ footer {
 
     .bubble-section {
         flex-direction: column; /* Uložení prvků pod sebe */
-        align-items: center; /* Uložení na střed */
+        align-items: center;
     }
 }
 
@@ -322,7 +334,11 @@ footer {
 
     .members-grid {
         grid-template-columns: 1fr; /* Jeden sloupec pro mobilní zařízení */
-        gap: 20px; /* Méně mezery mezi kartami na mobilu */
+        gap: 20px;
+    }
+
+    .member-card.member-7 {
+        grid-column: auto; /* Zajištění, že se karta na mobilních zařízeních umístí normálně */
     }
 
     .landing .content h1 {
@@ -334,19 +350,19 @@ footer {
     }
 
     #onas {
-        padding: 50px 20px; /* Snížení paddingu pro mobilní zařízení */
+        padding: 50px 20px;
     }
 
     .bubble-section {
-        flex-direction: column; /* Uložení prvků pod sebe */
-        align-items: center; /* Uložení na střed */
+        flex-direction: column;
+        align-items: center;
     }
 
     #onas h2 {
-        font-size: 2rem; /* Zmenšení nadpisu v sekci O nás */
+        font-size: 2rem;
     }
 
     .bubble {
-        width: 100%; /* Bubliny zabírají 100% šířku */
+        width: 100%; 
     }
 }

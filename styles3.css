@@ -69,7 +69,7 @@ nav ul li a {
     width: 80%; /* Šířka sekce */
     margin: 100px auto 0 auto; /* Středování sekce */
     border-radius: 4rem; /* Zakulacené rohy */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Stín pro sekci */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Stín pro sekci */
     min-height: 1600px; /* Zvětšení minimální výšky sekce (nyní 600px) */
 }
 #evakuace h2 {
@@ -89,7 +89,7 @@ nav ul li a {
     background-color: #ffffff; /* Barva pozadí bubliny */
     border-radius: 10px; /* Zaoblení rohů bubliny */
     padding: 20px; /* Vnitřní okraj bubliny */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Stín bubliny */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Stín bubliny */
     width: 90%; /* Šířka bubliny */
     max-width: 600px; /* Maximální šířka bubliny */
     text-align: left; /* Zarovnání textu vlevo */
