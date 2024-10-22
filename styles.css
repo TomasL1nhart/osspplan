@@ -128,32 +128,9 @@ nav ul {
     transform: scale(1.1);
 }
 
-#evakuace {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-}
-
-#evakuace h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-}
-
-.points {
-    list-style: none;
-    font-size: 1.15rem;
-    padding: 0;
-    text-align: left;
-    margin-left: 10rem; 
-}
-
-.points li {
-    font-size: 1.2rem;
-}
-
 #onas {
     background-color: #ffffff;
-    min-height: 130vh;
+    min-height: 150vh;
 }
 
 #onas h2 {
@@ -197,7 +174,7 @@ nav ul {
 }
 
 #members {
-    min-height: 125vh;
+    min-height: 155vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -253,7 +230,7 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 10px;
     background-color: #f9f9f9;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .member-card.member-7 {
