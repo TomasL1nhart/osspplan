@@ -296,12 +296,13 @@ footer {
 @media (max-width: 1200px) {
     .members-grid {
         grid-template-columns: 1fr; /* Jeden sloupec pro mobilní zařízení */
-        gap: 20px;
+        gap: 35px;
+        width: 70%;
     }
 
     .member-card.member-7 {
         grid-column: auto; /* Zrušení umístění člena 7 do specifického sloupce */
-        width: 100%
+        width: 100%;
     }
 
     .bubble {
@@ -335,10 +336,12 @@ footer {
     .members-grid {
         grid-template-columns: 1fr; /* Jeden sloupec pro mobilní zařízení */
         gap: 20px;
+        width: 90%;
     }
 
     .member-card.member-7 {
         grid-column: auto; /* Zajištění, že se karta na mobilních zařízeních umístí normálně */
+        width: 100%;
     }
 
     .landing .content h1 {
