@@ -113,7 +113,6 @@ nav ul li a {
 }
 
 footer {
-    background-color: #e4e4e4be; /* Barva pozadí footeru */
     color: black; /* Barva textu */
     text-align: center; /* Zarovnání textu na střed */
     width: 100%; /* Zajištění, že footer je přes celou šířku */
