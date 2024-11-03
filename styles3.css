@@ -99,7 +99,7 @@ nav ul li a:hover {
 
 @media (max-width: 768px) {
     #nav-menu {
-        display: none;
+        display: none; /* Skryté výchozí */
         position: fixed;
         top: 50%;
         left: 50%;
@@ -109,40 +109,32 @@ nav ul li a:hover {
         background-color: rgba(224, 224, 224, 0.95);
         z-index: 1000;
         padding-top: 60px;
+        flex-direction: column; /* Položky pod sebou */
     }
     
-    #nav-menu ul {
-        list-style-type: none;
-        padding: 0;
-        text-align: center;
-    }
-    
-    #nav-menu ul li {
-        margin: 20px 0;
-    }
-    
-    /* Přidání stylu pro aktivní stav */
     #nav-menu.active {
-        display: block;
+        display: flex; /* Zobrazit jako flexbox, když je aktivní */
     }
     
     #nav-menu ul {
         list-style-type: none;
         padding: 0;
         text-align: center;
+        display: flex; /* Mělo by být 'flex' pro zarovnání textu, ale můžeš zkusit 'block' */
+        flex-direction: column; /* Aby byly položky pod sebou */
     }
-
+    
     #nav-menu ul li {
         margin: 20px 0;
     }
-
+    
     #nav-menu a {
         text-decoration: none;
         color: black;
         font-size: 1.5rem;
         transition: color 0.3s, transform 0.3s;
     }
-
+}
     #nav-menu a:hover {
         color: gray;
         transform: scale(1.1);
@@ -153,7 +145,6 @@ nav ul li a:hover {
         display: block;
         cursor: pointer;
         font-size: 1.5rem;
-        position: fixed;
         top: 10px;
         right: 20px;
         z-index: 1100; /* Vyšší než menu, aby byla ikona vždy viditelná */
@@ -162,7 +153,6 @@ nav ul li a:hover {
     .hamburger.open {
         color: rgb(0, 0, 0); /* Změna barvy nebo stylu pro ikonu, když je otevřená */
     }
-}
 
 @media (min-width: 769px) {
     /* Skrytí hamburger ikony na větších obrazovkách */

@@ -10,13 +10,14 @@
     <title>• Plán</title>
 </head>
 <body>
+    <header>
     <img src="img/logo.webp" alt="Logo" class="logo" draggable="false">
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
     <nav id="nav-menu">
         <ul>
             <li><a href="index.html">Domů</a></li>
             <li><a href="evakuace.html">Evakuace</a></li>
-            <li><a href="#onas">O nás</a></li>
+            <li><a href="index.html#onas">O nás</a></li>
             <li><a href="plan.html">Plán</a></li>
         </ul>
     </nav>
@@ -32,7 +33,6 @@
                 <img src="img/ossp.webp" alt="OSSP" class="footer-logo" draggable="false">
             </div>
         </footer>
-
         <script>
             function toggleMenu() {
                 const navMenu = document.getElementById('nav-menu');

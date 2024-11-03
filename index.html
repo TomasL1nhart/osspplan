@@ -19,7 +19,7 @@
             <ul>
                 <li><a href="index.html">Domů</a></li>
                 <li><a href="evakuace.html">Evakuace</a></li>
-                <li><a href="#onas">O nás</a></li>
+                <li><a href="#onas" onclick="closeMenu()">O nás</a></li>
                 <li><a href="plan.html">Plán</a></li>
             </ul>
         </nav>
@@ -110,27 +110,36 @@
     </section>
     </div>
     <script>
-function toggleMenu() {
-    const navMenu = document.getElementById('nav-menu');
-    navMenu.classList.toggle('active');
-    
-    hamburger.classList.toggle("open");
-    
-    // Změna ikony mezi "hamburger" a "X"
-    if (hamburger.classList.contains("open")) {
-        hamburger.innerHTML = "&#10005;"; // X symbol
-    } else {
-        hamburger.innerHTML = "&#9776;"; // Hamburger symbol
-    }
-
-    // Zablokování scrollování při otevření menu
-    if (navMenu.classList.contains('active')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'auto';
-    }
-}
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+            
+            hamburger.classList.toggle("open");
+            
+            // Změna ikony mezi "hamburger" a "X"
+            if (hamburger.classList.contains("open")) {
+                hamburger.innerHTML = "&#10005;"; // X symbol
+            } else {
+                hamburger.innerHTML = "&#9776;"; // Hamburger symbol
+            }
+        
+            // Zablokování scrollování při otevření menu
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+        
+        function closeMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.remove('active');
+            hamburger.classList.remove("open");
+            hamburger.innerHTML = "&#9776;"; // Změna na hamburger symbol
+        
+            // Zpět scrollování
+            document.body.style.overflow = 'auto';
+        }        
     </script>
-    
 </body>
 </html>
