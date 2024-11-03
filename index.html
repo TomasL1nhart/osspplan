@@ -14,7 +14,7 @@
 <body>
     <header>
         <img src="img/logo.webp" alt="Logo" class="logo" draggable="false">
-        <div class="hamburger" id="hamburger">&#9776;</div>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
         <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Domů</a></li>
@@ -107,8 +107,30 @@
             <img src="img/ossp.webp" alt="OSSP" class="footer-logo" draggable="false">
         </div>
     </footer>
-    
     </section>
     </div>
+    <script>
+function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('active');
+    
+    hamburger.classList.toggle("open");
+    
+    // Změna ikony mezi "hamburger" a "X"
+    if (hamburger.classList.contains("open")) {
+        hamburger.innerHTML = "&#10005;"; // X symbol
+    } else {
+        hamburger.innerHTML = "&#9776;"; // Hamburger symbol
+    }
+
+    // Zablokování scrollování při otevření menu
+    if (navMenu.classList.contains('active')) {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.body.style.overflow = 'auto';
+    }
+}
+    </script>
+    
 </body>
 </html>
