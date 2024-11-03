@@ -11,49 +11,92 @@
 </head>
 <body>
     <header>
-    <img src="img/logo.webp" alt="Logo" class="logo" draggable="false">
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
-    <nav id="nav-menu">
-        <ul>
-            <li><a href="index.html">Domů</a></li>
-            <li><a href="evakuace.html">Evakuace</a></li>
-            <li><a href="index.html#onas">O nás</a></li>
-            <li><a href="plan.html">Plán</a></li>
-        </ul>
-    </nav>
-</header>    
-        <div class="button-container">
-            <a href="" class="download-button">Stáhnout plán</a>
-        </div>    
-        <footer>
-            <div class="footer-content">
-                <hr style="border: 0.1em solid rgb(173, 173, 173); width: 85%; margin: 0 auto 10px auto; border-radius: 8px;">
-                <p>Havarijní Plán OSŠP</p>
-                <a href="https://www.ossp.cz" target="_blank">OSSP.cz</a>
-                <img src="img/ossp.webp" alt="OSSP" class="footer-logo" draggable="false">
-            </div>
-        </footer>
-        <script>
-            function toggleMenu() {
-                const navMenu = document.getElementById('nav-menu');
-                navMenu.classList.toggle('active');
+        <img src="img/logo.webp" alt="Logo" class="logo" draggable="false">
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html">Domů</a></li>
+                <li><a href="evakuace.html">Evakuace</a></li>
+                <li><a href="index.html#onas">O nás</a></li>
+                <li><a href="plan.html">Plán</a></li>
+            </ul>
+        </nav>
+    </header>    
+
+    <div class="button-container">
+        <a href="#" class="download-button" onclick="showPasswordField()">Stáhnout plán</a>
+        <div id="password-container" style="display: none;">
+            <input type="password" id="password" placeholder="Zadejte heslo">
+            <button onclick="validatePassword()">Potvrdit</button>
+            <p id="error-message">Nesprávné heslo. Zkuste to znovu.</p>
+        </div>
+    </div>
+    
+
+    <footer>
+        <div class="footer-content">
+            <hr style="border: 0.1em solid rgb(173, 173, 173); width: 85%; margin: 0 auto 10px auto; border-radius: 8px;">
+            <p>Havarijní Plán OSŠP</p>
+            <a href="https://www.ossp.cz" target="_blank">OSSP.cz</a>
+            <img src="img/ossp.webp" alt="OSSP" class="footer-logo" draggable="false">
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle("open");
+
+            if (hamburger.classList.contains("open")) {
+                hamburger.innerHTML = "&#10005;"; // X symbol
+            } else {
+                hamburger.innerHTML = "&#9776;"; // Hamburger symbol
+            }
+
+            if (navMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+            function showPasswordField() {
+                document.getElementById("password-container").style.display = "flex";
+            }
+        
+            function validatePassword() {
+                const passwordInput = document.getElementById("password").value;
+                const correctPassword = "Plan_SKOLY389";
                 
-                hamburger.classList.toggle("open");
-                
-                // Změna ikony mezi "hamburger" a "X"
-                if (hamburger.classList.contains("open")) {
-                    hamburger.innerHTML = "&#10005;"; // X symbol
+                if (passwordInput === correctPassword) {
+                    window.open("src/Havarijni plany.pdf");
                 } else {
-                    hamburger.innerHTML = "&#9776;"; // Hamburger symbol
-                }
-            
-                // Zablokování scrollování při otevření menu
-                if (navMenu.classList.contains('active')) {
-                    document.body.style.overflow = 'hidden';
-                } else {
-                    document.body.style.overflow = 'auto';
+                    document.getElementById("error-message").style.display = "block";
                 }
             }
-                </script>
+        
+        function downloadFiles() {
+            const passwordInput = document.getElementById('password').value;
+            const correctPassword = "Plan_SKOLY389";
+            const errorMessage = document.getElementById('error-message');
+
+            if (passwordInput === correctPassword) {
+                errorMessage.style.display = 'none';
+
+                const files = ["Havarijni plan.pdf", "Kontrolni cinnosti.pdf"];
+                files.forEach(file => {
+                    const a = document.createElement('a');
+                    a.href = file;
+                    a.download = file;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                });
+            } else {
+                errorMessage.style.display = 'block';
+            }
+        }
+    </script>
 </body>
 </html>

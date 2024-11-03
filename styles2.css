@@ -155,6 +155,63 @@ nav ul li a:hover {
     align-items: center; /* Vertikální vycentrování */
 }
 
+/* Styl pro kontejner hesla */
+#password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    animation: fadeIn 0.5s ease-in-out; /* Animace pro jemný přechod */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#password-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px; /* Zmenšení mezery nad heslem */
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+#password {
+    width: 80%;
+    max-width: 250px;
+    padding: 8px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 8px;
+}
+
+#password-container button {
+    padding: 8px 15px;
+    font-size: 1rem;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+#error-message {
+    font-size: 0.9rem;
+    color: #ff4d4d;
+    margin-top: 5px;
+    display: none;
+    text-align: center;
+}
+
+
 .download-button {
     display: inline-block;
     padding: 15px 30px;
