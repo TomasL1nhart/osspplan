@@ -111,6 +111,10 @@ nav ul li a:hover {
         font-size: 1.5rem;
         transition: color 0.3s, transform 0.3s;
     }
+    
+    .header {
+        background-color: rgba(224, 224, 224, 0.95);
+    }
 }
     #nav-menu a:hover {
         color: gray;
@@ -145,6 +149,9 @@ nav ul li a:hover {
 
     #nav-menu ul {
         display: flex;
+    }
+    .header {
+        background-color: #e0e0e0;
     }
 }
 
